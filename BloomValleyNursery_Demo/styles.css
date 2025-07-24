@@ -1,0 +1,311 @@
+h1 {
+  text-decoration: underline;
+}
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 5%;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+img.test {
+  width: 100%;
+  height: auto;
+}
+
+img.icon {
+  width: auto;
+  height: 50%;
+}
+
+.business-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #27ae60;
+}
+
+/* Main content styles */
+main {
+  padding: 2rem 5%;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  background-color: #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  overflow: hidden;
+}
+
+.content-text {
+  width: 100%;
+}
+
+.content-text h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+/* Footer styles */
+footer {
+  background-color: #014038;
+  color: white;
+  padding: 2rem 5%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter,
+.social,
+.footer-nav {
+  width: 100%;
+}
+
+.newsletter h3,
+.social h3,
+.footer-nav h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  padding: 0.75rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 0.9rem;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-container {
+    width: auto;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .business-title {
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  .content-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .content-section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .content-image {
+    flex: 1;
+    height: 300px;
+  }
+
+  .content-text {
+    flex: 1;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .newsletter {
+    flex: 2;
+    min-width: 300px;
+  }
+
+  .social,
+  .footer-nav {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+  }
+
+  .newsletter-form button {
+    width: auto;
+  }
+}
+
+/* Mobile menu styles */
+@media (max-width: 767px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  nav.active {
+    max-height: 300px;
+    padding-top: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav li {
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}

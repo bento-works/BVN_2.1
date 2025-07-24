@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bloom Valley - Community Spotlight</title>
+    <style></style>
+  </head>
+  <body>
+    <!-- Header with navigation -->
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="https://iili.io/FV4e8Lg.png"
+            alt="Bloom Valley Logo"
+            class="logo"
+          />
+          <span class="business-title">Bloom Valley</span>
+        </div>
+        <button class="menu-toggle" aria-label="Main menu">☰</button>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="About us.html">About Us</a></li>
+          <li><a href="Community Spotlight.html">Community Spotlight</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content-image">
+        <img src="https://iili.io/FVQjVxS.png" alt="Healthy Tree Bark"> 
+      </div>
+    <div class="container">
+      <div class="header">
+          <h2>Community Spotlight</h2>
+          <p>Community hosted events supported by Bloom Valley by date and host listed below. No event charges, tickets, or purchase needed to attend. We hope to see you there!</p>
+      </div>
+      <div class="flex-container">
+          <div class="text-box">
+              <h3>Plant-A-Tree Fridays w/ Johnny Appleseed </h3>
+              <p >Join Johnny and friends as we plant saplings each Friday morning at 9:00a. Contact us for locations by date. </p>
+          </div>
+          
+          <div class="text-box">
+              <h3>Transplant Troubleshooting Thursdays w Tom Bombadil</h3>
+              <p>Ask our resident expert Tom about how to maximize success when transferring plants to larger substrate containers. Use the 
+                <a href="About us.html">Contact form</a> to ask about specific situations.</p>
+          </div>
+          
+          <div class="text-box">
+              <h3>Giveaway Saturday @ 11 OCT 2025: Free Supplies and soil </h3>
+              <p>Bloom Valley hosts equipment rentals, community swaps, and giveaway events during the first weekend of each month. Our next event on 11 OCT 2025 features free supplies and soil mix bags.
+                </p>
+          </div>
+        </main>
+      </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form class="newsletter-form" action="subscribe.php" method="post">
+            <input type="email" name="email" placeholder="Your email address" />
+            <button type="submit" name="submit">Subscribe</button>
+          </form>
+        </div>
+
+        <div class="social">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+            <a href="https://www.instagram.com/" aria-label="Instagram"
+              >Instagram</a
+            >
+            <a href="https://x.com" aria-label="Twitter">X</a>
+            <a href="https://bsky.app/" aria-label="Bluesky">BlueSky</a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="About us.html">About Us</a></li>
+            <li><a href="Community Spotlight.html">Community Spotlight</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2025 bento-works. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle functionality
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          const nav = document.getElementById("main-nav");
+          nav.classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>
